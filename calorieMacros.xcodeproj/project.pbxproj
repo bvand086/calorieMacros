@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B6133452C9FB37900C56BF5 /* calorieMacrosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133442C9FB37900C56BF5 /* calorieMacrosApp.swift */; };
+		8B6133472C9FB37900C56BF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133462C9FB37900C56BF5 /* ContentView.swift */; };
+		8B6133492C9FB37A00C56BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6133482C9FB37A00C56BF5 /* Assets.xcassets */; };
+		8B61334C2C9FB37A00C56BF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B61334B2C9FB37A00C56BF5 /* Preview Assets.xcassets */; };
+		8B6133562C9FB37B00C56BF5 /* calorieMacrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133552C9FB37B00C56BF5 /* calorieMacrosTests.swift */; };
+		8B6133602C9FB37B00C56BF5 /* calorieMacrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61335F2C9FB37B00C56BF5 /* calorieMacrosUITests.swift */; };
+		8B6133622C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133612C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B6133522C9FB37B00C56BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B6133392C9FB37900C56BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B6133402C9FB37900C56BF5;
+			remoteInfo = calorieMacros;
+		};
+		8B61335C2C9FB37B00C56BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B6133392C9FB37900C56BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B6133402C9FB37900C56BF5;
+			remoteInfo = calorieMacros;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B6133412C9FB37900C56BF5 /* calorieMacros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calorieMacros.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6133442C9FB37900C56BF5 /* calorieMacrosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMacrosApp.swift; sourceTree = "<group>"; };
+		8B6133462C9FB37900C56BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8B6133482C9FB37A00C56BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B61334B2C9FB37A00C56BF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B6133512C9FB37B00C56BF5 /* calorieMacrosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calorieMacrosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6133552C9FB37B00C56BF5 /* calorieMacrosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMacrosTests.swift; sourceTree = "<group>"; };
+		8B61335B2C9FB37B00C56BF5 /* calorieMacrosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calorieMacrosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B61335F2C9FB37B00C56BF5 /* calorieMacrosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMacrosUITests.swift; sourceTree = "<group>"; };
+		8B6133612C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMacrosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B61333E2C9FB37900C56BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61334E2C9FB37B00C56BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6133582C9FB37B00C56BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B6133382C9FB37900C56BF5 = {
+			isa = PBXGroup;
+			children = (
+				8B6133432C9FB37900C56BF5 /* calorieMacros */,
+				8B6133542C9FB37B00C56BF5 /* calorieMacrosTests */,
+				8B61335E2C9FB37B00C56BF5 /* calorieMacrosUITests */,
+				8B6133422C9FB37900C56BF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B6133422C9FB37900C56BF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B6133412C9FB37900C56BF5 /* calorieMacros.app */,
+				8B6133512C9FB37B00C56BF5 /* calorieMacrosTests.xctest */,
+				8B61335B2C9FB37B00C56BF5 /* calorieMacrosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B6133432C9FB37900C56BF5 /* calorieMacros */ = {
+			isa = PBXGroup;
+			children = (
+				8B6133442C9FB37900C56BF5 /* calorieMacrosApp.swift */,
+				8B6133462C9FB37900C56BF5 /* ContentView.swift */,
+				8B6133482C9FB37A00C56BF5 /* Assets.xcassets */,
+				8B61334A2C9FB37A00C56BF5 /* Preview Content */,
+			);
+			path = calorieMacros;
+			sourceTree = "<group>";
+		};
+		8B61334A2C9FB37A00C56BF5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8B61334B2C9FB37A00C56BF5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B6133542C9FB37B00C56BF5 /* calorieMacrosTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B6133552C9FB37B00C56BF5 /* calorieMacrosTests.swift */,
+			);
+			path = calorieMacrosTests;
+			sourceTree = "<group>";
+		};
+		8B61335E2C9FB37B00C56BF5 /* calorieMacrosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B61335F2C9FB37B00C56BF5 /* calorieMacrosUITests.swift */,
+				8B6133612C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift */,
+			);
+			path = calorieMacrosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B6133402C9FB37900C56BF5 /* calorieMacros */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6133652C9FB37B00C56BF5 /* Build configuration list for PBXNativeTarget "calorieMacros" */;
+			buildPhases = (
+				8B61333D2C9FB37900C56BF5 /* Sources */,
+				8B61333E2C9FB37900C56BF5 /* Frameworks */,
+				8B61333F2C9FB37900C56BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = calorieMacros;
+			productName = calorieMacros;
+			productReference = 8B6133412C9FB37900C56BF5 /* calorieMacros.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B6133502C9FB37B00C56BF5 /* calorieMacrosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6133682C9FB37B00C56BF5 /* Build configuration list for PBXNativeTarget "calorieMacrosTests" */;
+			buildPhases = (
+				8B61334D2C9FB37B00C56BF5 /* Sources */,
+				8B61334E2C9FB37B00C56BF5 /* Frameworks */,
+				8B61334F2C9FB37B00C56BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B6133532C9FB37B00C56BF5 /* PBXTargetDependency */,
+			);
+			name = calorieMacrosTests;
+			productName = calorieMacrosTests;
+			productReference = 8B6133512C9FB37B00C56BF5 /* calorieMacrosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B61335A2C9FB37B00C56BF5 /* calorieMacrosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B61336B2C9FB37B00C56BF5 /* Build configuration list for PBXNativeTarget "calorieMacrosUITests" */;
+			buildPhases = (
+				8B6133572C9FB37B00C56BF5 /* Sources */,
+				8B6133582C9FB37B00C56BF5 /* Frameworks */,
+				8B6133592C9FB37B00C56BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B61335D2C9FB37B00C56BF5 /* PBXTargetDependency */,
+			);
+			name = calorieMacrosUITests;
+			productName = calorieMacrosUITests;
+			productReference = 8B61335B2C9FB37B00C56BF5 /* calorieMacrosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B6133392C9FB37900C56BF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					8B6133402C9FB37900C56BF5 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					8B6133502C9FB37B00C56BF5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 8B6133402C9FB37900C56BF5;
+					};
+					8B61335A2C9FB37B00C56BF5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 8B6133402C9FB37900C56BF5;
+					};
+				};
+			};
+			buildConfigurationList = 8B61333C2C9FB37900C56BF5 /* Build configuration list for PBXProject "calorieMacros" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B6133382C9FB37900C56BF5;
+			productRefGroup = 8B6133422C9FB37900C56BF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B6133402C9FB37900C56BF5 /* calorieMacros */,
+				8B6133502C9FB37B00C56BF5 /* calorieMacrosTests */,
+				8B61335A2C9FB37B00C56BF5 /* calorieMacrosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B61333F2C9FB37900C56BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B61334C2C9FB37A00C56BF5 /* Preview Assets.xcassets in Resources */,
+				8B6133492C9FB37A00C56BF5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61334F2C9FB37B00C56BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6133592C9FB37B00C56BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B61333D2C9FB37900C56BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6133472C9FB37900C56BF5 /* ContentView.swift in Sources */,
+				8B6133452C9FB37900C56BF5 /* calorieMacrosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61334D2C9FB37B00C56BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6133562C9FB37B00C56BF5 /* calorieMacrosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6133572C9FB37B00C56BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6133602C9FB37B00C56BF5 /* calorieMacrosUITests.swift in Sources */,
+				8B6133622C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B6133532C9FB37B00C56BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B6133402C9FB37900C56BF5 /* calorieMacros */;
+			targetProxy = 8B6133522C9FB37B00C56BF5 /* PBXContainerItemProxy */;
+		};
+		8B61335D2C9FB37B00C56BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B6133402C9FB37900C56BF5 /* calorieMacros */;
+			targetProxy = 8B61335C2C9FB37B00C56BF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8B6133632C9FB37B00C56BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B6133642C9FB37B00C56BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B6133662C9FB37B00C56BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"calorieMacros/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.calorieMacros;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B6133672C9FB37B00C56BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"calorieMacros/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.calorieMacros;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B6133692C9FB37B00C56BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.calorieMacrosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/calorieMacros.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/calorieMacros";
+			};
+			name = Debug;
+		};
+		8B61336A2C9FB37B00C56BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.calorieMacrosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/calorieMacros.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/calorieMacros";
+			};
+			name = Release;
+		};
+		8B61336C2C9FB37B00C56BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.calorieMacrosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = calorieMacros;
+			};
+			name = Debug;
+		};
+		8B61336D2C9FB37B00C56BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.calorieMacrosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = calorieMacros;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B61333C2C9FB37900C56BF5 /* Build configuration list for PBXProject "calorieMacros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6133632C9FB37B00C56BF5 /* Debug */,
+				8B6133642C9FB37B00C56BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B6133652C9FB37B00C56BF5 /* Build configuration list for PBXNativeTarget "calorieMacros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6133662C9FB37B00C56BF5 /* Debug */,
+				8B6133672C9FB37B00C56BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B6133682C9FB37B00C56BF5 /* Build configuration list for PBXNativeTarget "calorieMacrosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6133692C9FB37B00C56BF5 /* Debug */,
+				8B61336A2C9FB37B00C56BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B61336B2C9FB37B00C56BF5 /* Build configuration list for PBXNativeTarget "calorieMacrosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B61336C2C9FB37B00C56BF5 /* Debug */,
+				8B61336D2C9FB37B00C56BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B6133392C9FB37900C56BF5 /* Project object */;
+}
