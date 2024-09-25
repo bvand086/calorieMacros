@@ -14,6 +14,14 @@
 		8B6133562C9FB37B00C56BF5 /* calorieMacrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133552C9FB37B00C56BF5 /* calorieMacrosTests.swift */; };
 		8B6133602C9FB37B00C56BF5 /* calorieMacrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61335F2C9FB37B00C56BF5 /* calorieMacrosUITests.swift */; };
 		8B6133622C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133612C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift */; };
+		8B6133792C9FB91600C56BF5 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61336E2C9FB91600C56BF5 /* Meal.swift */; };
+		8B61337A2C9FB91600C56BF5 /* DataStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133702C9FB91600C56BF5 /* DataStorageService.swift */; };
+		8B61337B2C9FB91600C56BF5 /* ImageCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133712C9FB91600C56BF5 /* ImageCaptureService.swift */; };
+		8B61337C2C9FB91600C56BF5 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133722C9FB91600C56BF5 /* OpenAIService.swift */; };
+		8B61337D2C9FB91600C56BF5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133742C9FB91600C56BF5 /* CameraView.swift */; };
+		8B61337E2C9FB91600C56BF5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133752C9FB91600C56BF5 /* HomeView.swift */; };
+		8B61337F2C9FB91600C56BF5 /* MealLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133762C9FB91600C56BF5 /* MealLogView.swift */; };
+		8B6133802C9FB91600C56BF5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133772C9FB91600C56BF5 /* StatisticsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,15 @@
 		8B61335B2C9FB37B00C56BF5 /* calorieMacrosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calorieMacrosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B61335F2C9FB37B00C56BF5 /* calorieMacrosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMacrosUITests.swift; sourceTree = "<group>"; };
 		8B6133612C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calorieMacrosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B61336E2C9FB91600C56BF5 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		8B6133702C9FB91600C56BF5 /* DataStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageService.swift; sourceTree = "<group>"; };
+		8B6133712C9FB91600C56BF5 /* ImageCaptureService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureService.swift; sourceTree = "<group>"; };
+		8B6133722C9FB91600C56BF5 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		8B6133742C9FB91600C56BF5 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		8B6133752C9FB91600C56BF5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8B6133762C9FB91600C56BF5 /* MealLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealLogView.swift; sourceTree = "<group>"; };
+		8B6133772C9FB91600C56BF5 /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		8B6133832CA0948200C56BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +91,7 @@
 		8B6133382C9FB37900C56BF5 = {
 			isa = PBXGroup;
 			children = (
+				8B6133832CA0948200C56BF5 /* Info.plist */,
 				8B6133432C9FB37900C56BF5 /* calorieMacros */,
 				8B6133542C9FB37B00C56BF5 /* calorieMacrosTests */,
 				8B61335E2C9FB37B00C56BF5 /* calorieMacrosUITests */,
@@ -96,6 +114,9 @@
 			children = (
 				8B6133442C9FB37900C56BF5 /* calorieMacrosApp.swift */,
 				8B6133462C9FB37900C56BF5 /* ContentView.swift */,
+				8B61336F2C9FB91600C56BF5 /* Models */,
+				8B6133732C9FB91600C56BF5 /* Services */,
+				8B6133782C9FB91600C56BF5 /* Views */,
 				8B6133482C9FB37A00C56BF5 /* Assets.xcassets */,
 				8B61334A2C9FB37A00C56BF5 /* Preview Content */,
 			);
@@ -125,6 +146,35 @@
 				8B6133612C9FB37B00C56BF5 /* calorieMacrosUITestsLaunchTests.swift */,
 			);
 			path = calorieMacrosUITests;
+			sourceTree = "<group>";
+		};
+		8B61336F2C9FB91600C56BF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B61336E2C9FB91600C56BF5 /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B6133732C9FB91600C56BF5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B6133702C9FB91600C56BF5 /* DataStorageService.swift */,
+				8B6133712C9FB91600C56BF5 /* ImageCaptureService.swift */,
+				8B6133722C9FB91600C56BF5 /* OpenAIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8B6133782C9FB91600C56BF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B6133742C9FB91600C56BF5 /* CameraView.swift */,
+				8B6133752C9FB91600C56BF5 /* HomeView.swift */,
+				8B6133762C9FB91600C56BF5 /* MealLogView.swift */,
+				8B6133772C9FB91600C56BF5 /* StatisticsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6133472C9FB37900C56BF5 /* ContentView.swift in Sources */,
+				8B6133802C9FB91600C56BF5 /* StatisticsView.swift in Sources */,
+				8B61337D2C9FB91600C56BF5 /* CameraView.swift in Sources */,
+				8B61337F2C9FB91600C56BF5 /* MealLogView.swift in Sources */,
+				8B61337B2C9FB91600C56BF5 /* ImageCaptureService.swift in Sources */,
+				8B6133792C9FB91600C56BF5 /* Meal.swift in Sources */,
 				8B6133452C9FB37900C56BF5 /* calorieMacrosApp.swift in Sources */,
+				8B61337E2C9FB91600C56BF5 /* HomeView.swift in Sources */,
+				8B61337A2C9FB91600C56BF5 /* DataStorageService.swift in Sources */,
+				8B61337C2C9FB91600C56BF5 /* OpenAIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -404,6 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -421,9 +481,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"calorieMacros/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Info.plist calorieMacros/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_FILE[sdk=*]" = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,9 +510,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"calorieMacros/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Info.plist calorieMacros/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_FILE[sdk=*]" = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

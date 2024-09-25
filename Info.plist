@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!--
    Property List.plist
    calorieMacros
@@ -8,5 +8,27 @@
    Copyright (c) 2024 ___ORGANIZATIONNAME___. All rights reserved.
 -->
 <plist version="1.0">
-<dict/>
+<dict>
+    <!-- Bundle Identifier -->
+    <key>CFBundleIdentifier</key>
+    <string>com.yourcompany.calorieMacros</string>
+    
+    <!-- Display Name -->
+    <key>CFBundleName</key>
+    <string>CalorieMacros</string>
+    
+    <!-- Version -->
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    
+    <!-- Build Number -->
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    
+    <!-- Camera Usage Description -->
+    <key>NSCameraUsageDescription</key>
+    <string>This app requires access to the camera to scan barcodes for tracking calories.</string>
+    
+    <!-- Additional keys as needed -->
+</dict>
 </plist>
