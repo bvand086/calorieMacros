@@ -2,96 +2,58 @@ import SwiftUI
 import AVFoundation
 
 struct CameraView: View {
-    @State private var showImagePicker = false
-    @State private var capturedImage: UIImage?
-    @State private var showCameraDenied = false
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject private var mealViewModel: MealViewModel
+    @State private var image: UIImage?
+    @State private var showingImagePicker = false
+    @State private var showingConfirmation = false
 
     var body: some View {
         VStack {
-            if let image = capturedImage {
+            if let image = image {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 200)
-                    .cornerRadius(10)
+                
+                Button("Confirm and Analyze") {
+                    showingConfirmation = true
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
             } else {
-                Image(systemName: "photo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 200)
-                    .foregroundColor(.gray)
+                Button("Take Photo") {
+                    showingImagePicker = true
+                }
             }
-            
-            Button(action: {
-                checkCameraPermission()
-            }) {
-                Text("Capture Image")
-                    .font(.headline)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
         }
-        .sheet(isPresented: $showImagePicker) {
-            ImagePicker(image: $capturedImage)
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(image: $image)
         }
-        .alert(isPresented: $showCameraDenied) {
+        .alert(isPresented: $showingConfirmation) {
             Alert(
-                title: Text("Camera Access Denied"),
-                message: Text("Please enable camera access in settings to capture images."),
-                dismissButton: .default(Text("OK"))
+                title: Text("Confirm Analysis"),
+                message: Text("Do you want to analyze this meal image?"),
+                primaryButton: .default(Text("Analyze")) {
+                    analyzeImage()
+                },
+                secondaryButton: .cancel()
             )
         }
     }
-    
-    func checkCameraPermission() {
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized:
-            showImagePicker = true
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { granted in
-                DispatchQueue.main.async {
-                    showImagePicker = granted
-                }
-            }
-        case .denied, .restricted:
-            showCameraDenied = true
-        @unknown default:
-            showCameraDenied = true
-        }
+
+    private func analyzeImage() {
+        guard let image = image else { return }
+        let newMeal = Meal(name: "Analyzed Meal", image: image)
+        mealViewModel.addMealAndAnalyze(newMeal, image: image)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Environment(\.presentationMode) var presentationMode
     @Binding var image: UIImage?
-
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        let parent: ImagePicker
-
-        init(parent: ImagePicker) {
-            self.parent = parent
-        }
-        
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-
-        func imagePickerController(_ picker: UIImagePickerController,
-                                   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let uiImage = info[.originalImage] as? UIImage {
-                parent.image = uiImage
-            }
-
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
-    }
+    @Environment(\.presentationMode) private var presentationMode
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
@@ -100,6 +62,31 @@ struct ImagePicker: UIViewControllerRepresentable {
         return picker
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController,
-                                context: UIViewControllerRepresentableContext<ImagePicker>) {}
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {}
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        let parent: ImagePicker
+
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[.originalImage] as? UIImage {
+                parent.image = image
+            }
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+    }
+}
+
+struct CameraView_Previews: PreviewProvider {
+    static var previews: some View {
+        CameraView()
+            .environmentObject(MealViewModel())
+    }
 }

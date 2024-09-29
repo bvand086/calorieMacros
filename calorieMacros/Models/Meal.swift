@@ -1,16 +1,15 @@
 import Foundation
+import UIKit
 
-struct Meal: Identifiable, Hashable {
-    let id = UUID()
-    let name: String
-
-    // If you have other properties, include them in the initializer
-    // Example:
-    // init(name: String, calories: Int, carbs: Int, protein: Int, fat: Int) {
-    //     self.name = name
-    //     self.calories = calories
-    //     self.carbs = carbs
-    //     self.protein = protein
-    //     self.fat = fat
-    // }
+struct Meal: Identifiable, Codable {
+    let id: UUID
+    var name: String
+    var calories: Int
+    var protein: Int
+    var carbs: Int
+    var fat: Int
+    var date: Date
+    var aiAnalysis: String?  // New property to store AI analysis results
+    
+    // ... (rest of the code remains unchanged)
 }

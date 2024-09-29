@@ -8,8 +8,8 @@ struct NutritionGoal: Identifiable {
 }
 
 struct HomeView: View {
-    // Sample data - in a real app, this would come from a data model
-    @State private var meals: [Meal] = []
+    @EnvironmentObject private var mealViewModel: MealViewModel
+    @State private var isPresentingCameraView = false
     
     let goals: [NutritionGoal] = [
         NutritionGoal(name: "Calories", current: 1000, target: 2000),
@@ -21,98 +21,129 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("Daily Intake")
-                        .font(.largeTitle)
-                        .padding(.horizontal)
-                    
+                VStack(alignment: .leading, spacing: 24) {
+                    dailyIntakeSection
                     lastMealsSection
-                    
                     goalsSection
                 }
+                .padding()
             }
             .navigationTitle("Home")
-            .onAppear {
-                // Load meals here
-                loadMeals()
+            .background(Color(.systemGroupedBackground))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { isPresentingCameraView = true }) {
+                        Image(systemName: "camera")
+                            .foregroundColor(.accentColor)
+                    }
+                }
+            }
+            .sheet(isPresented: $isPresentingCameraView) {
+                CameraView()
             }
         }
+    }
+    
+    var dailyIntakeSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Daily Intake")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            HStack {
+                ForEach(["Calories", "Carbs", "Protein", "Fat"], id: \.self) { nutrient in
+                    VStack {
+                        Text(nutrient)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        Text("0g")
+                            .font(.headline)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+            }
+        }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.systemBackground)))
     }
     
     var lastMealsSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Last 3 Meals")
-                .font(.headline)
-                .padding(.horizontal)
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Recent Meals")
+                .font(.title3)
+                .fontWeight(.semibold)
             
-            ForEach(meals.prefix(3)) { meal in
-                HStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.gray.opacity(0.2))
-                        .frame(width: 50, height: 50)
+            ForEach(mealViewModel.meals.prefix(3)) { meal in
+                HStack(spacing: 16) {
+                    if let image = meal.image {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 60, height: 60)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    } else {
+                        Image(systemName: "fork.knife")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.secondary)
+                            .frame(width: 60, height: 60)
+                            .background(Color(.systemGray5))
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    }
                     
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 4) {
                         Text(meal.name)
-                            .font(.subheadline)
+                            .font(.headline)
                         Text(mealDetails(for: meal))
-                            .font(.caption)
+                            .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
                 }
-                .padding(.horizontal)
             }
         }
-        .padding(.vertical)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
-        .shadow(radius: 2)
-        .padding(.horizontal)
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.systemBackground)))
     }
     
     var goalsSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 12) {
             Text("Goals")
-                .font(.headline)
-                .padding(.horizontal)
+                .font(.title3)
+                .fontWeight(.semibold)
             
             ForEach(goals) { goal in
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 8) {
                     HStack {
-                        Text("\(goal.name) Goal: \(goal.target) \(goal.name == "Calories" ? "kcal" : "g")")
+                        Text(goal.name)
+                            .font(.headline)
                         Spacer()
-                        Text("Remaining: \(goal.target - goal.current) \(goal.name == "Calories" ? "kcal" : "g")")
+                        Text("\(goal.current)/\(goal.target) \(goal.name == "Calories" ? "kcal" : "g")")
+                            .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
-                    .font(.subheadline)
                     
                     ProgressView(value: Double(goal.current), total: Double(goal.target))
+                        .accentColor(.blue)
                 }
-                .padding(.horizontal)
             }
         }
-        .padding(.vertical)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
-        .shadow(radius: 2)
-        .padding(.horizontal)
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.systemBackground)))
     }
     
     func loadMeals() {
-        // Load meals from your data source
-        // This is just a placeholder. Replace with actual data loading logic.
-        meals = [
-            Meal(name: "Breakfast"),
-            Meal(name: "Lunch"),
-            Meal(name: "Dinner")
-        ]
+        // Optional: Load meals from persistent storage
     }
     
     func mealDetails(for meal: Meal) -> String {
-        // Replace this with actual logic to get meal details
-        return "Meal details"
+        return "Calories: \(meal.calories), P: \(meal.protein)g, C: \(meal.carbs)g, F: \(meal.fat)g"
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+        // No need to provide MealViewModel here anymore
     }
 }

@@ -22,6 +22,7 @@
 		8B61337E2C9FB91600C56BF5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133752C9FB91600C56BF5 /* HomeView.swift */; };
 		8B61337F2C9FB91600C56BF5 /* MealLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133762C9FB91600C56BF5 /* MealLogView.swift */; };
 		8B6133802C9FB91600C56BF5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6133772C9FB91600C56BF5 /* StatisticsView.swift */; };
+		8B7F782F2CA4A9FA00F9DCDA /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F782E2CA4A9FA00F9DCDA /* MealViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		8B6133762C9FB91600C56BF5 /* MealLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealLogView.swift; sourceTree = "<group>"; };
 		8B6133772C9FB91600C56BF5 /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		8B6133832CA0948200C56BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7D1B382CA8D29D0036FCFC /* CalorieMacros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalorieMacros.xcdatamodel; sourceTree = "<group>"; };
+		8B7F782E2CA4A9FA00F9DCDA /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 		8B6133382C9FB37900C56BF5 = {
 			isa = PBXGroup;
 			children = (
+				8B7D1B372CA8D29D0036FCFC /* CalorieMacros.xcdatamodeld */,
 				8B6133832CA0948200C56BF5 /* Info.plist */,
 				8B6133432C9FB37900C56BF5 /* calorieMacros */,
 				8B6133542C9FB37B00C56BF5 /* calorieMacrosTests */,
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				8B61336E2C9FB91600C56BF5 /* Meal.swift */,
+				8B7F782E2CA4A9FA00F9DCDA /* MealViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,7 +246,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					8B6133402C9FB37900C56BF5 = {
 						CreatedOnToolsVersion = 15.4;
@@ -309,6 +314,7 @@
 			files = (
 				8B6133472C9FB37900C56BF5 /* ContentView.swift in Sources */,
 				8B6133802C9FB91600C56BF5 /* StatisticsView.swift in Sources */,
+				8B7F782F2CA4A9FA00F9DCDA /* MealViewModel.swift in Sources */,
 				8B61337D2C9FB91600C56BF5 /* CameraView.swift in Sources */,
 				8B61337F2C9FB91600C56BF5 /* MealLogView.swift in Sources */,
 				8B61337B2C9FB91600C56BF5 /* ImageCaptureService.swift in Sources */,
@@ -482,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "Info.plist calorieMacros/Preview\\ Content";
+				DEVELOPMENT_TEAM = 5QVV95MU3M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_FILE[sdk=*]" = Info.plist;
@@ -511,6 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "Info.plist calorieMacros/Preview\\ Content";
+				DEVELOPMENT_TEAM = 5QVV95MU3M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_FILE[sdk=*]" = Info.plist;
@@ -535,7 +543,6 @@
 		8B6133692C9FB37B00C56BF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -554,7 +561,6 @@
 		8B61336A2C9FB37B00C56BF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -573,7 +579,6 @@
 		8B61336C2C9FB37B00C56BF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -590,7 +595,6 @@
 		8B61336D2C9FB37B00C56BF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -644,6 +648,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B7D1B372CA8D29D0036FCFC /* CalorieMacros.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B7D1B382CA8D29D0036FCFC /* CalorieMacros.xcdatamodel */,
+			);
+			currentVersion = 8B7D1B382CA8D29D0036FCFC /* CalorieMacros.xcdatamodel */;
+			path = CalorieMacros.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8B6133392C9FB37900C56BF5 /* Project object */;
 }
